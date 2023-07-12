@@ -9,6 +9,7 @@ import Foundation
 import CoreLocation
 
 struct Landmark: Codable {
+    let id: Int
     let name: String
     let category: String
     let city: String
