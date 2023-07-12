@@ -8,7 +8,8 @@
 import Foundation
 import CoreLocation
 
-struct LandmarkViewModel {
+struct LandmarkViewModel: Identifiable {
+    let id = UUID()
     let landmark: Landmark
     
     init(_ landmark: Landmark) {
