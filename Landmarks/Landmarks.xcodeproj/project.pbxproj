@@ -55,8 +55,7 @@
 		77CBDC2C2A5EACF700B168B3 /* Landmarks */ = {
 			isa = PBXGroup;
 			children = (
-				77CBDC3B2A5EC05100B168B3 /* CircleImage.swift */,
-				77CBDC3E2A5EC4CC00B168B3 /* MapView.swift */,
+				77CBDC402A5EC72C00B168B3 /* Views */,
 				77CBDC2D2A5EACF700B168B3 /* LandmarksApp.swift */,
 				77CBDC2F2A5EACF700B168B3 /* ContentView.swift */,
 				77CBDC312A5EACF800B168B3 /* Assets.xcassets */,
@@ -71,6 +70,15 @@
 				77CBDC342A5EACF800B168B3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		77CBDC402A5EC72C00B168B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				77CBDC3B2A5EC05100B168B3 /* CircleImage.swift */,
+				77CBDC3E2A5EC4CC00B168B3 /* MapView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
