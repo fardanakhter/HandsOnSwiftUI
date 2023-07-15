@@ -47,7 +47,9 @@ struct LandmarkDetail: View {
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {
+    private static let landmarks = ModelData().landmarks
+    
     static var previews: some View {
-        LandmarkDetail(viewModel: ModelData().landmarks[0])
+        LandmarkDetail(viewModel: landmarks[0])
     }
 }
