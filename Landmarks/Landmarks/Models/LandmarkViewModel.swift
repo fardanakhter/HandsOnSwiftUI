@@ -10,7 +10,7 @@ import CoreLocation
 
 struct LandmarkViewModel: Identifiable {
     let id = UUID()
-    let landmark: Landmark
+    private let landmark: Landmark
     
     init(_ landmark: Landmark) {
         self.landmark = landmark
