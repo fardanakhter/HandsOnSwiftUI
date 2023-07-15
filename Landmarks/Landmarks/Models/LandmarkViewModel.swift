@@ -36,6 +36,10 @@ struct LandmarkViewModel: Identifiable {
         landmark.description
     }
     
+    var isFavorite: Bool {
+        landmark.isFavorite
+    }
+    
     var coordinates: CLLocationCoordinate2D {
         .init(latitude: landmark.coordinates.latitude, longitude: landmark.coordinates.longitude)
     }

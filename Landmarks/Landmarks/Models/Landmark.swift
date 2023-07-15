@@ -18,6 +18,7 @@ struct Landmark: Codable {
     let description: String
     let imageName: String
     let coordinates: Coordinates
+    let isFavorite: Bool
 }
 
 struct Coordinates: Codable {
