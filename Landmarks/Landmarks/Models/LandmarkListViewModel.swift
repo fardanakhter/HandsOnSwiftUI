@@ -11,7 +11,7 @@ class LandmarkListViewModel {
     private let allLandmarks: [LandmarkViewModel]
     
     private var favoriteLandmarks: [LandmarkViewModel] {
-        landmarks.filter {
+        allLandmarks.filter {
             $0.isFavorite
         }
     }

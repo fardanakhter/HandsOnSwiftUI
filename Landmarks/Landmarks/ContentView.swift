@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        let listViewModel = LandmarkListViewModel(landmarks: landmarks)
+        let listDataModel = ModelData().landmarks
+        let listViewModel = LandmarkListViewModel(landmarks: listDataModel)
         LandmarkList(viewModel: listViewModel)
     }
 }

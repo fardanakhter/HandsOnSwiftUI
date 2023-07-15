@@ -7,10 +7,6 @@
 
 import Foundation
 
-var landmarks: [LandmarkViewModel] = {
-    DataLoader<[Landmark]>.load(from: "landmarkData.json").map{ LandmarkViewModel($0) }
-}()
-
 class DataLoader<T: Decodable> {
     static func load(from file: String) -> T {
         var data: Data
