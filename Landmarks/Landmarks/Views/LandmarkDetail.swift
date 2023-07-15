@@ -40,8 +40,8 @@ struct LandmarkDetail: View {
                 Text(viewModel.landmarkDescription)
             }
             .padding()
-            
-            Spacer()
+            .navigationTitle(viewModel.landmarkName)
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
