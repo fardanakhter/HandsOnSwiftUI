@@ -20,6 +20,7 @@
 		77CBDC4D2A5EFC9D00B168B3 /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBDC4C2A5EFC9D00B168B3 /* LandmarkRow.swift */; };
 		77CBDC4F2A5F027700B168B3 /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBDC4E2A5F027700B168B3 /* LandmarkList.swift */; };
 		77DD48CA2A62A851007F7FC5 /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD48C92A62A851007F7FC5 /* LandmarkDetail.swift */; };
+		77DD48CC2A62D0DF007F7FC5 /* LandmarkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD48CB2A62D0DF007F7FC5 /* LandmarkListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		77CBDC4C2A5EFC9D00B168B3 /* LandmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
 		77CBDC4E2A5F027700B168B3 /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		77DD48C92A62A851007F7FC5 /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
+		77DD48CB2A62D0DF007F7FC5 /* LandmarkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			children = (
 				77CBDC452A5EE3AB00B168B3 /* Landmark.swift */,
 				77CBDC472A5EE63B00B168B3 /* LandmarkViewModel.swift */,
+				77DD48CB2A62D0DF007F7FC5 /* LandmarkListViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				77CBDC4B2A5EE67300B168B3 /* DataLoader.swift in Sources */,
 				77CBDC2E2A5EACF700B168B3 /* LandmarksApp.swift in Sources */,
 				77CBDC4F2A5F027700B168B3 /* LandmarkList.swift in Sources */,
+				77DD48CC2A62D0DF007F7FC5 /* LandmarkListViewModel.swift in Sources */,
 				77CBDC3C2A5EC05100B168B3 /* CircleImage.swift in Sources */,
 				77CBDC482A5EE63B00B168B3 /* LandmarkViewModel.swift in Sources */,
 				77CBDC4D2A5EFC9D00B168B3 /* LandmarkRow.swift in Sources */,
