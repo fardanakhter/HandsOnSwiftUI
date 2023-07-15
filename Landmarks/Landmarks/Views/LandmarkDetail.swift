@@ -11,7 +11,7 @@ struct LandmarkDetail: View {
     let viewModel: LandmarkViewModel
     
     var body: some View {
-        VStack {
+        ScrollView {
             MapView(coordinates: viewModel.coordinates)
                 .ignoresSafeArea(edges: .top)
                 .frame(height: 300)
