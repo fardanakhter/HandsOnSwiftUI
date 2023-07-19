@@ -9,14 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        let listDataModel = ModelData().landmarks
-        let listViewModel = LandmarkListViewModel(landmarks: listDataModel)
-        LandmarkList(viewModel: listViewModel)
+        LandmarkList()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    private static var viewModel: LandmarkListViewModel {
+        let listDataModel = ModelData().landmarks
+        return LandmarkListViewModel(landmarks: listDataModel)
+    }
+    
     static var previews: some View {
         ContentView()
+            .environmentObject(viewModel)
     }
 }

@@ -7,8 +7,8 @@
 
 import Foundation
 
-class ModelData: ObservableObject {
-    @Published var landmarks: [LandmarkViewModel] = {
+class ModelData {
+    var landmarks: [LandmarkViewModel] = {
         DataLoader<[Landmark]>.load(from: "landmarkData.json").map {
             LandmarkViewModel($0)
         }

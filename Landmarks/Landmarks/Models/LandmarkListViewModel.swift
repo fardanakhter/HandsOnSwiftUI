@@ -7,8 +7,8 @@
 
 import Foundation
 
-class LandmarkListViewModel {
-    private let allLandmarks: [LandmarkViewModel]
+class LandmarkListViewModel: ObservableObject {
+    @Published private var allLandmarks: [LandmarkViewModel]
     
     private var favoriteLandmarks: [LandmarkViewModel] {
         allLandmarks.filter {
