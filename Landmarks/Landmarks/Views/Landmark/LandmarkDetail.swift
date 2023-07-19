@@ -8,26 +8,34 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
-    let viewModel: LandmarkViewModel
+    @EnvironmentObject var landmarks: LandmarkListViewModel
+    
+    let landmark: LandmarkViewModel
+    private var favoriteProperty: Binding<Bool> {
+        $landmarks.list.first{ $0.id == landmark.id }!.isFavorite
+    }
     
     var body: some View {
         ScrollView {
-            MapView(coordinates: viewModel.coordinates)
+            MapView(coordinates: landmark.coordinates)
                 .ignoresSafeArea(edges: .top)
                 .frame(height: 300)
             
-            CircleImage(image: Image(viewModel.landmarkImage))
+            CircleImage(image: Image(landmark.landmarkImage))
                 .offset(y: -130)
                 .padding(.bottom, -130)
             
             VStack(alignment: .leading, spacing: 8.0) {
-                Text(viewModel.landmarkName)
-                    .font(.title)
-                    .multilineTextAlignment(.leading)
                 HStack {
-                    Text(viewModel.landmarkPark)
+                    Text(landmark.landmarkName)
+                        .font(.title)
+                    .multilineTextAlignment(.leading)
+                    FavoriteButton(isSet: favoriteProperty)
+                }
+                HStack {
+                    Text(landmark.landmarkPark)
                     Spacer()
-                    Text(viewModel.landmarkState)
+                    Text(landmark.landmarkState)
                         
                 }
                 .font(.subheadline)
@@ -35,12 +43,12 @@ struct LandmarkDetail: View {
                 
                 Divider()
                 
-                Text("About \(viewModel.landmarkName)")
+                Text("About \(landmark.landmarkName)")
                     .font(.title2)
-                Text(viewModel.landmarkDescription)
+                Text(landmark.landmarkDescription)
             }
             .padding()
-            .navigationTitle(viewModel.landmarkName)
+            .navigationTitle(landmark.landmarkName)
             .navigationBarTitleDisplayMode(.inline)
         }
     }
@@ -50,6 +58,6 @@ struct LandmarkDetail_Previews: PreviewProvider {
     private static let landmarks = ModelData().landmarks
     
     static var previews: some View {
-        LandmarkDetail(viewModel: landmarks[0])
+        LandmarkDetail(landmark: landmarks[0])
     }
 }

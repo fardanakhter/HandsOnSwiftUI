@@ -8,19 +8,20 @@
 import Foundation
 
 class LandmarkListViewModel: ObservableObject {
-    @Published private var allLandmarks: [LandmarkViewModel]
+    @Published var list: [LandmarkViewModel]
     
-    private var favoriteLandmarks: [LandmarkViewModel] {
-        allLandmarks.filter {
+    private var favoriteList: [LandmarkViewModel] {
+        list.filter {
             $0.isFavorite
         }
     }
     
     init(landmarks: [LandmarkViewModel]) {
-        self.allLandmarks = landmarks
+        self.list = landmarks
     }
     
     func getLandmarks(withFilter isFavorite: Bool) -> [LandmarkViewModel] {
-        isFavorite ? favoriteLandmarks : allLandmarks
+        isFavorite ? favoriteList : list
     }
+
 }

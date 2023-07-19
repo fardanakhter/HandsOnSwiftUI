@@ -10,7 +10,7 @@ import CoreLocation
 
 struct LandmarkViewModel: Identifiable {
     let id = UUID()
-    private let landmark: Landmark
+    private var landmark: Landmark
     
     init(_ landmark: Landmark) {
         self.landmark = landmark
@@ -37,7 +37,8 @@ struct LandmarkViewModel: Identifiable {
     }
     
     var isFavorite: Bool {
-        landmark.isFavorite
+        get { landmark.isFavorite }
+        set { landmark.isFavorite = newValue }
     }
     
     var coordinates: CLLocationCoordinate2D {
