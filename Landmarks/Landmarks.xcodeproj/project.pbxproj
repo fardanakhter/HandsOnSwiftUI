@@ -24,6 +24,7 @@
 		77DD48CC2A62D0DF007F7FC5 /* LandmarkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD48CB2A62D0DF007F7FC5 /* LandmarkListViewModel.swift */; };
 		77DD48CE2A62DF08007F7FC5 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD48CD2A62DF08007F7FC5 /* ModelData.swift */; };
 		77F29B0C2A6BF3060078B8DA /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F29B0B2A6BF3050078B8DA /* HexagonParameters.swift */; };
+		77F29B0E2A6BF51F0078B8DA /* BadgeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F29B0D2A6BF51F0078B8DA /* BadgeBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		77DD48CB2A62D0DF007F7FC5 /* LandmarkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListViewModel.swift; sourceTree = "<group>"; };
 		77DD48CD2A62DF08007F7FC5 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		77F29B0B2A6BF3050078B8DA /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
+		77F29B0D2A6BF51F0078B8DA /* BadgeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				77F29B0B2A6BF3050078B8DA /* HexagonParameters.swift */,
+				77F29B0D2A6BF51F0078B8DA /* BadgeBackground.swift */,
 				77C45A702A67FA0900750775 /* Landmark */,
 				77C45A6F2A67F9F900750775 /* Helpers */,
 			);
@@ -238,6 +241,7 @@
 				77CBDC4D2A5EFC9D00B168B3 /* LandmarkRow.swift in Sources */,
 				77DD48CA2A62A851007F7FC5 /* LandmarkDetail.swift in Sources */,
 				77CBDC462A5EE3AB00B168B3 /* Landmark.swift in Sources */,
+				77F29B0E2A6BF51F0078B8DA /* BadgeBackground.swift in Sources */,
 				77C45A6E2A67F87300750775 /* FavoriteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
