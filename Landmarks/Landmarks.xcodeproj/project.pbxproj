@@ -23,6 +23,7 @@
 		77DD48CA2A62A851007F7FC5 /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD48C92A62A851007F7FC5 /* LandmarkDetail.swift */; };
 		77DD48CC2A62D0DF007F7FC5 /* LandmarkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD48CB2A62D0DF007F7FC5 /* LandmarkListViewModel.swift */; };
 		77DD48CE2A62DF08007F7FC5 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD48CD2A62DF08007F7FC5 /* ModelData.swift */; };
+		77F29B0C2A6BF3060078B8DA /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F29B0B2A6BF3050078B8DA /* HexagonParameters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		77DD48C92A62A851007F7FC5 /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
 		77DD48CB2A62D0DF007F7FC5 /* LandmarkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListViewModel.swift; sourceTree = "<group>"; };
 		77DD48CD2A62DF08007F7FC5 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		77F29B0B2A6BF3050078B8DA /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		77CBDC402A5EC72C00B168B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				77F29B0B2A6BF3050078B8DA /* HexagonParameters.swift */,
 				77C45A702A67FA0900750775 /* Landmark */,
 				77C45A6F2A67F9F900750775 /* Helpers */,
 			);
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77F29B0C2A6BF3060078B8DA /* HexagonParameters.swift in Sources */,
 				77CBDC302A5EACF700B168B3 /* ContentView.swift in Sources */,
 				77CBDC3F2A5EC4CC00B168B3 /* MapView.swift in Sources */,
 				77CBDC4B2A5EE67300B168B3 /* DataLoader.swift in Sources */,
