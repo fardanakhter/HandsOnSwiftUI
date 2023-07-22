@@ -122,8 +122,7 @@
 		77CBDC402A5EC72C00B168B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				77F29B0B2A6BF3050078B8DA /* HexagonParameters.swift */,
-				77F29B0D2A6BF51F0078B8DA /* BadgeBackground.swift */,
+				77F29B102A6C12950078B8DA /* Badge */,
 				77C45A702A67FA0900750775 /* Landmark */,
 				77C45A6F2A67F9F900750775 /* Helpers */,
 			);
@@ -155,6 +154,15 @@
 				77CBDC4A2A5EE67300B168B3 /* DataLoader.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		77F29B102A6C12950078B8DA /* Badge */ = {
+			isa = PBXGroup;
+			children = (
+				77F29B0B2A6BF3050078B8DA /* HexagonParameters.swift */,
+				77F29B0D2A6BF51F0078B8DA /* BadgeBackground.swift */,
+			);
+			path = Badge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
