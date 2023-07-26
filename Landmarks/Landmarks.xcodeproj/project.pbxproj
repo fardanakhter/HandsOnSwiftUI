@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		770C8AD12A711FAA00B7CF26 /* hikeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 770C8AD02A711FAA00B7CF26 /* hikeData.json */; };
 		77C45A6E2A67F87300750775 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C45A6D2A67F87300750775 /* FavoriteButton.swift */; };
 		77CBDC2E2A5EACF700B168B3 /* LandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBDC2D2A5EACF700B168B3 /* LandmarksApp.swift */; };
 		77CBDC302A5EACF700B168B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBDC2F2A5EACF700B168B3 /* ContentView.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		770C8AD02A711FAA00B7CF26 /* hikeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hikeData.json; sourceTree = "<group>"; };
 		77C45A6D2A67F87300750775 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		77CBDC2A2A5EACF700B168B3 /* Landmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77CBDC2D2A5EACF700B168B3 /* LandmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksApp.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		77CBDC412A5EE2E100B168B3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				770C8AD02A711FAA00B7CF26 /* hikeData.json */,
 				77CBDC422A5EE2F000B168B3 /* landmarkData.json */,
 			);
 			path = Resource;
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				770C8AD12A711FAA00B7CF26 /* hikeData.json in Resources */,
 				77CBDC352A5EACF800B168B3 /* Preview Assets.xcassets in Resources */,
 				77CBDC322A5EACF800B168B3 /* Assets.xcassets in Resources */,
 				77CBDC432A5EE2F000B168B3 /* landmarkData.json in Resources */,
