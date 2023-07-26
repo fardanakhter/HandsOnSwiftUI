@@ -13,4 +13,6 @@ class ModelData {
             LandmarkViewModel($0)
         }
     }()
+    
+    var hikes = DataLoader<[Hike]>.load(from: "hikeData.json")
 }
