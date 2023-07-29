@@ -23,21 +23,3 @@ class ModelData {
         DataLoader<[Hike]>.load(from: "hikeData.json")
     }()
 }
-
-class CategoryListViewModel: ObservableObject {
-    private(set) var categoryRows: [CategoryRowViewModel]
-    
-    init(categoryRows: [CategoryRowViewModel]) {
-        self.categoryRows = categoryRows
-    }
-}
-
-class CategoryRowViewModel {
-    private(set) var category: String
-    private(set) var landmarks: [LandmarkViewModel]
-    
-    init(category: String, landmarks: [LandmarkViewModel]) {
-        self.category = category
-        self.landmarks = landmarks
-    }
-}
