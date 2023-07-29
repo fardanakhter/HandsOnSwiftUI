@@ -9,12 +9,19 @@ import SwiftUI
 
 @main
 struct LandmarksApp: App {
-    @StateObject var viewModel = LandmarkListViewModel(landmarks: ModelData().landmarks)
+    static let modelData = ModelData()
+    
+    @StateObject var landmarkListViewModel = {
+        LandmarkListViewModel(landmarks: modelData.landmarks)
+    }()
+    
+    @StateObject var categoryListViewModel = modelData.categories
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(viewModel)
+                .environmentObject(landmarkListViewModel)
+                .environmentObject(categoryListViewModel)
         }
     }
 }

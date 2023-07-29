@@ -149,8 +149,8 @@
 		77C45A702A67FA0900750775 /* Landmark */ = {
 			isa = PBXGroup;
 			children = (
-				77CBDC4C2A5EFC9D00B168B3 /* LandmarkRow.swift */,
 				77CBDC4E2A5F027700B168B3 /* LandmarkList.swift */,
+				77CBDC4C2A5EFC9D00B168B3 /* LandmarkRow.swift */,
 				77DD48C92A62A851007F7FC5 /* LandmarkDetail.swift */,
 			);
 			path = Landmark;

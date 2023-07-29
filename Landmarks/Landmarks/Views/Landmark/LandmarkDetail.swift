@@ -12,7 +12,7 @@ struct LandmarkDetail: View {
     
     let landmark: LandmarkViewModel
     private var favoriteProperty: Binding<Bool> {
-        $landmarks.list.first{ $0.id == landmark.id }?.isFavorite ?? .constant(false)
+        $landmarks.list.first{ $0.id == landmark.id }!.isFavorite
     }
     
     var body: some View {
@@ -55,16 +55,15 @@ struct LandmarkDetail: View {
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {
+    private static let modelData = ModelData()
+    private static let landmarks = modelData.landmarks
     
-    private static var listOfLandmark: LandmarkListViewModel {
-        let listDataModel = ModelData().landmarks
-        return LandmarkListViewModel(landmarks: listDataModel)
-    }
-    
-    private static let landmark = ModelData().landmarks[0]
+    private static var landmarkListViewModel: LandmarkListViewModel = {
+        LandmarkListViewModel(landmarks: landmarks)
+    }()
     
     static var previews: some View {
-        LandmarkDetail(landmark: landmark)
-            .environmentObject(listOfLandmark)
+        LandmarkDetail(landmark: landmarks[0])
+            .environmentObject(landmarkListViewModel)
     }
 }
