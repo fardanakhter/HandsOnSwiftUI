@@ -33,8 +33,11 @@ struct CategoryHome: View {
 }
 
 struct CategoryHome_Previews: PreviewProvider {
+    static let modelData = ModelData()
+    
     static var previews: some View {
         CategoryHome()
-            .environmentObject(ModelData().categories)
+            .environmentObject(modelData.categories)
+            .environmentObject(LandmarkListViewModel(landmarks: modelData.landmarks))
     }
 }
