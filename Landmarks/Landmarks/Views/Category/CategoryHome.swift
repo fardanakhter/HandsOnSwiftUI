@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct CategoryHome: View {
-    @EnvironmentObject var categories: CategoryListViewModel
+    @EnvironmentObject var viewModel: CategoryListViewModel
     
     var body: some View {
         NavigationView {
-            List(categories.categoryRows, id: \.category) { row in
-                CategoryRow(viewModel: row)
-                    .listRowInsets(EdgeInsets())
+            
+            List {
+                Image(viewModel.featuredLandmarkImage)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 200)
+                    .cornerRadius(5.0)
+                    .clipped()
+                
+                ForEach(viewModel.categoryRows, id: \.category) { row in
+                    CategoryRow(viewModel: row)
+                        .listRowInsets(EdgeInsets())
+                }
             }
             .listStyle(.plain)
             .navigationTitle("Featured")
