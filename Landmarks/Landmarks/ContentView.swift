@@ -40,13 +40,15 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    static let modelData = ModelData()
+    
     private static var landmarkListViewModel: LandmarkListViewModel {
-        let listDataModel = ModelData().landmarks
+        let listDataModel = modelData.landmarks
         return LandmarkListViewModel(landmarks: listDataModel)
     }
     
     private static var categoryListViewModel: CategoryListViewModel {
-        return ModelData().categories
+        return modelData.categories
     }
     
     static var previews: some View {
