@@ -15,4 +15,19 @@ class ModelData {
     }()
     
     var hikes = DataLoader<[Hike]>.load(from: "hikeData.json")
+    
+    var categories: [CategoryListViewModel] {
+        Dictionary(grouping: landmarks, by: {$0.landmarkCategory}).map(CategoryListViewModel.init)
+    }
+}
+
+
+class CategoryListViewModel: ObservableObject {
+    private(set) var category: String
+    private(set) var landmarks: [LandmarkViewModel]
+    
+    init(category: String, landmarks: [LandmarkViewModel]) {
+        self.category = category
+        self.landmarks = landmarks
+    }
 }

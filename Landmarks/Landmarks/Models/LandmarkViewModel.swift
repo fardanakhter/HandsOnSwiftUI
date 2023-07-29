@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-struct LandmarkViewModel: Identifiable {
+class LandmarkViewModel: Identifiable {
     let id = UUID()
     private var landmark: Landmark
     
@@ -34,6 +34,10 @@ struct LandmarkViewModel: Identifiable {
     
     var landmarkDescription: String {
         landmark.description
+    }
+    
+    var landmarkCategory: String {
+        landmark.category.rawValue
     }
     
     var isFavorite: Bool {
