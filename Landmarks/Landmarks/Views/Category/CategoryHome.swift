@@ -13,8 +13,10 @@ struct CategoryHome: View {
     var body: some View {
         NavigationView {
             List(categories.categoryRows, id: \.category) { row in
-                Text(row.category)
+                CategoryRow(viewModel: row)
+                    .listRowInsets(EdgeInsets())
             }
+            .listStyle(.plain)
             .navigationTitle("Featured")
         }
     }

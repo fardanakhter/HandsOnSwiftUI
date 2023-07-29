@@ -20,9 +20,10 @@ struct CategoryItem: View {
                 .shadow(radius: 1.5)
             Text(landmark.landmarkName)
                 .font(.subheadline)
-                .kerning(1.5)
+                .kerning(1.2)
             Spacer()
         }
+        .frame(width: 155)
     }
 }
 

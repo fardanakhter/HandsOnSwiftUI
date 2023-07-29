@@ -13,22 +13,22 @@ struct CategoryRow: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(viewModel.category)
-                .padding(.leading, 16)
                 .padding(.bottom, 16)
                 .font(.title3)
                 .kerning(1.5)
                 .bold()
             
-            ScrollView(.horizontal, showsIndicators: true) {
+            ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16.0) {
                     ForEach(viewModel.landmarks) { row in
                         CategoryItem(landmark: row)
                     }
                 }
+                .padding(.bottom, 16)
             }
-            .padding(.leading, 16)
         }
-        .frame(height: 180)
+        .padding(.top, 8)
+        .padding(.leading, 16)
     }
 }
 
