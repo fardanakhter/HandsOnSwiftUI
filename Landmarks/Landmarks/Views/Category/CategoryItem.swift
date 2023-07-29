@@ -13,6 +13,7 @@ struct CategoryItem: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 16.0) {
             Image(landmark.landmarkImage)
+                .renderingMode(.original)
                 .resizable()
                 .cornerRadius(5.0)
                 .frame(width: 155, height: 155)
@@ -20,6 +21,7 @@ struct CategoryItem: View {
                 .shadow(radius: 1.5)
             Text(landmark.landmarkName)
                 .font(.subheadline)
+                .foregroundColor(.black)
                 .kerning(1.2)
             Spacer()
         }
