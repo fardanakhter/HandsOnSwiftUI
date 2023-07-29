@@ -19,6 +19,7 @@ struct Landmark: Codable {
     let imageName: String
     let coordinates: Coordinates
     var isFavorite: Bool
+    var isFeatured: Bool
     
     enum Category: String, Codable {
         case rivers = "Rivers"

@@ -45,6 +45,10 @@ class LandmarkViewModel: Identifiable {
         set { landmark.isFavorite = newValue }
     }
     
+    var isFeatured: Bool {
+        landmark.isFeatured
+    }
+    
     var coordinates: CLLocationCoordinate2D {
         .init(latitude: landmark.coordinates.latitude, longitude: landmark.coordinates.longitude)
     }

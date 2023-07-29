@@ -13,5 +13,13 @@ class CategoryListViewModel: ObservableObject {
     init(categoryRows: [CategoryRowViewModel]) {
         self.categoryRows = categoryRows
     }
+    
+    var featuredLandmarkImage: String {
+        getFeaturedLandmark().landmarkImage
+    }
+    
+    private func getFeaturedLandmark() -> LandmarkViewModel {
+        return categoryRows.flatMap{ $0.landmarks }.filter{ $0.isFeatured }[0]
+    }
 }
 
