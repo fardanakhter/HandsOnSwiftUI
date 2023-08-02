@@ -43,6 +43,7 @@
 		77F8FB9F2A7A985E00EABE4A /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F8FB9E2A7A985E00EABE4A /* ProfileSummary.swift */; };
 		77F8FBA12A7A9B6C00EABE4A /* HikeBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F8FBA02A7A9B6C00EABE4A /* HikeBadge.swift */; };
 		77F8FBA32A7AA84800EABE4A /* HikeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F8FBA22A7AA84800EABE4A /* HikeViewModel.swift */; };
+		77F8FBA52A7ADAD900EABE4A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F8FBA42A7ADAD900EABE4A /* ProfileViewModel.swift */; };
 		77FCE7DC2A7A960B0036C691 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FCE7DB2A7A960B0036C691 /* Profile.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		77F8FB9E2A7A985E00EABE4A /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
 		77F8FBA02A7A9B6C00EABE4A /* HikeBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeBadge.swift; sourceTree = "<group>"; };
 		77F8FBA22A7AA84800EABE4A /* HikeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeViewModel.swift; sourceTree = "<group>"; };
+		77F8FBA42A7ADAD900EABE4A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		77FCE7DB2A7A960B0036C691 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				77FCE7DB2A7A960B0036C691 /* Profile.swift */,
+				77F8FBA42A7ADAD900EABE4A /* ProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				77CBDC462A5EE3AB00B168B3 /* Landmark.swift in Sources */,
 				770C8ADC2A71208500B7CF26 /* Hike.swift in Sources */,
 				77F29B0E2A6BF51F0078B8DA /* BadgeBackground.swift in Sources */,
+				77F8FBA52A7ADAD900EABE4A /* ProfileViewModel.swift in Sources */,
 				77C45A6E2A67F87300750775 /* FavoriteButton.swift in Sources */,
 				77F8FBA12A7A9B6C00EABE4A /* HikeBadge.swift in Sources */,
 				779ACB222A7527A00073AAB7 /* CategoryListViewModel.swift in Sources */,
