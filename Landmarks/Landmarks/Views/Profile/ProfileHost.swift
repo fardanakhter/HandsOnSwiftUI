@@ -11,7 +11,10 @@ struct ProfileHost: View {
     @State private var profile = Profile.default
     
     var body: some View {
-        ProfileSummary(profile: profile)
+        VStack(alignment: .leading) {
+            ProfileSummary(profile: profile)
+        }
+        .padding()
     }
 }
 
