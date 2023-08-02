@@ -14,19 +14,20 @@ extension AnyTransition {
 }
 
 struct HikeView: View {
-    var hike: Hike
+    var viewModel: HikeViewModel
+    
     @State private var showDetail = false
 
     var body: some View {
         VStack {
             HStack {
-                HikeGraph(hike: hike, path: \.elevation)
+                HikeGraph(hike: viewModel.hike, path: \.elevation)
                     .frame(width: 50, height: 30)
 
                 VStack(alignment: .leading) {
-                    Text(hike.name)
+                    Text(viewModel.hike.name)
                         .font(.headline)
-                    Text(hike.distanceText)
+                    Text(viewModel.hike.distanceText)
                 }
 
                 Spacer()
@@ -46,7 +47,7 @@ struct HikeView: View {
             }
 
             if showDetail {
-                HikeDetail(hike: hike)
+                HikeDetail(viewModel: viewModel)
                     .transition(.moveAndSlide)
             }
         }
@@ -56,8 +57,8 @@ struct HikeView: View {
 struct HikeView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            HikeView(hike: ModelData().hikes[0])
-                .padding()
+            let viewModel = ModelData().hikes[0]
+            HikeView(viewModel: viewModel).padding()
             Spacer()
         }
     }

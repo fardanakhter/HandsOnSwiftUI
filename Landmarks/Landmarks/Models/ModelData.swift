@@ -14,8 +14,10 @@ class ModelData {
         }
     }()
     
-    var hikes: [Hike] = {
-        DataLoader<[Hike]>.load(from: "hikeData.json")
+    var hikes: [HikeViewModel] = {
+        DataLoader<[Hike]>.load(from: "hikeData.json").map {
+            HikeViewModel($0)
+        }
     }()
     
     var categories: CategoryListViewModel {
