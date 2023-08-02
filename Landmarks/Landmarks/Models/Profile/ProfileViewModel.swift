@@ -9,7 +9,7 @@ import Foundation
 
 class ProfileViewModel: ObservableObject {
     
-    private let profile: Profile
+    @Published private var profile: Profile
     
     init(_ profile: Profile = .default) {
         self.profile = profile
