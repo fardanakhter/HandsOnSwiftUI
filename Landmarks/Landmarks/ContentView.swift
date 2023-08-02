@@ -51,9 +51,14 @@ struct ContentView_Previews: PreviewProvider {
         return modelData.categories
     }
     
+    private static var hikeViewModel: HikeViewModel {
+        return modelData.hikes[0]
+    }
+    
     static var previews: some View {
         ContentView()
             .environmentObject(landmarkListViewModel)
             .environmentObject(categoryListViewModel)
+            .environmentObject(hikeViewModel)
     }
 }
