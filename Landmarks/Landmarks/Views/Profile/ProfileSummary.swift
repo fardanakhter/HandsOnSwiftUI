@@ -9,22 +9,43 @@ import SwiftUI
 
 struct ProfileSummary: View {
     
+    @EnvironmentObject var hike: HikeViewModel
     let profile: Profile
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text(profile.username)
-                .bold()
-                .font(.title)
-            Text("Notifications: \(profile.prefersNotifications ? "On": "Off" )")
-            Text("Seasonal Photos: \(profile.seasonalPhoto.rawValue)")
-            Text("Goal Date: ") + Text(profile.goalDate, style: .date)
+        ScrollView {
+            VStack(alignment: .leading, spacing: 10) {
+                Text(profile.username)
+                    .bold()
+                    .font(.title)
+                Text("Notifications: \(profile.prefersNotifications ? "On": "Off" )")
+                Text("Seasonal Photos: \(profile.seasonalPhoto.rawValue)")
+                Text("Goal Date: ") + Text(profile.goalDate, style: .date)
+                
+                Divider()
+                
+                VStack(alignment: .leading) {
+                    Text("Completed Badges")
+                        .font(.headline)
+                    HStack {
+                        HikeBadge(name: "First Hike")
+                        HikeBadge(name: "Earth Day").hueRotation(Angle(degrees: 90))
+                        HikeBadge(name: "Tenth Hike") .hueRotation(Angle(degrees: 180))
+                    }
+                }
+                
+                HikeView(viewModel: hike)
+            }
         }
     }
 }
 
 struct ProfileSummary_Previews: PreviewProvider {
+    
+    private static let hikes = ModelData().hikes
+    
     static var previews: some View {
         ProfileSummary(profile: .default)
+            .environmentObject(hikes[0])
     }
 }
