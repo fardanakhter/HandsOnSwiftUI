@@ -39,6 +39,7 @@
 		77F29B122A6C12D90078B8DA /* BadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F29B112A6C12D90078B8DA /* BadgeSymbol.swift */; };
 		77F29B142A6C16690078B8DA /* RotatedBadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F29B132A6C16690078B8DA /* RotatedBadgeSymbol.swift */; };
 		77F29B162A6C26110078B8DA /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F29B152A6C26110078B8DA /* Badge.swift */; };
+		77FCE7DC2A7A960B0036C691 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FCE7DB2A7A960B0036C691 /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		77F29B112A6C12D90078B8DA /* BadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSymbol.swift; sourceTree = "<group>"; };
 		77F29B132A6C16690078B8DA /* RotatedBadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedBadgeSymbol.swift; sourceTree = "<group>"; };
 		77F29B152A6C26110078B8DA /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		77FCE7DB2A7A960B0036C691 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 				779ACB202A75278A0073AAB7 /* Category */,
 				779ACB1F2A75277F0073AAB7 /* Hike */,
 				779ACB1E2A7527760073AAB7 /* Landmark */,
+				77FCE7DB2A7A960B0036C691 /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			files = (
 				770C8AE22A7122A700B7CF26 /* GraphCapsule.swift in Sources */,
 				779ACB242A7527B40073AAB7 /* CategoryRowViewModel.swift in Sources */,
+				77FCE7DC2A7A960B0036C691 /* Profile.swift in Sources */,
 				77F29B0C2A6BF3060078B8DA /* HexagonParameters.swift in Sources */,
 				77CBDC302A5EACF700B168B3 /* ContentView.swift in Sources */,
 				77CBDC3F2A5EC4CC00B168B3 /* MapView.swift in Sources */,
