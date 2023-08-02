@@ -225,7 +225,7 @@
 				779ACB202A75278A0073AAB7 /* Category */,
 				779ACB1F2A75277F0073AAB7 /* Hike */,
 				779ACB1E2A7527760073AAB7 /* Landmark */,
-				77FCE7DB2A7A960B0036C691 /* Profile.swift */,
+				77FCE7DD2A7A97810036C691 /* Profile */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -248,6 +248,14 @@
 				77F29B132A6C16690078B8DA /* RotatedBadgeSymbol.swift */,
 			);
 			path = Badge;
+			sourceTree = "<group>";
+		};
+		77FCE7DD2A7A97810036C691 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				77FCE7DB2A7A960B0036C691 /* Profile.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
