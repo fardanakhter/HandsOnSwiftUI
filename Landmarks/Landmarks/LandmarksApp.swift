@@ -17,11 +17,14 @@ struct LandmarksApp: App {
     
     @StateObject var categoryListViewModel = modelData.categories
     
+    @StateObject var hikeViewModel = modelData.hikes[0]
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(landmarkListViewModel)
                 .environmentObject(categoryListViewModel)
+                .environmentObject(hikeViewModel)
         }
     }
 }
