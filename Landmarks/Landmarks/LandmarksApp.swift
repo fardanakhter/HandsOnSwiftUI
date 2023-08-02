@@ -19,12 +19,15 @@ struct LandmarksApp: App {
     
     @StateObject var hikeViewModel = modelData.hikes[0]
     
+    @StateObject var profileViewModel = ProfileViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(landmarkListViewModel)
                 .environmentObject(categoryListViewModel)
                 .environmentObject(hikeViewModel)
+                .environmentObject(profileViewModel)
         }
     }
 }

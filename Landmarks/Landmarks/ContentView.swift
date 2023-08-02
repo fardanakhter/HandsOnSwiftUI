@@ -60,5 +60,6 @@ struct ContentView_Previews: PreviewProvider {
             .environmentObject(landmarkListViewModel)
             .environmentObject(categoryListViewModel)
             .environmentObject(hikeViewModel)
+            .environmentObject(ProfileViewModel())
     }
 }

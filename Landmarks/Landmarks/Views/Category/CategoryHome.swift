@@ -39,7 +39,6 @@ struct CategoryHome: View {
             }
             .sheet(isPresented: $isShowingProfile) {
                 ProfileHost()
-                    .environmentObject(hike)
             }
             .navigationTitle("Featured")
         }
@@ -53,5 +52,7 @@ struct CategoryHome_Previews: PreviewProvider {
         CategoryHome()
             .environmentObject(modelData.categories)
             .environmentObject(LandmarkListViewModel(landmarks: modelData.landmarks))
+            .environmentObject(ModelData().hikes[0])
+            .environmentObject(ProfileViewModel())
     }
 }

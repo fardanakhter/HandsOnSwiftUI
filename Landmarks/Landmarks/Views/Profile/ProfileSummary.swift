@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct ProfileSummary: View {
-    
+    @EnvironmentObject var profile: ProfileViewModel
     @EnvironmentObject var hike: HikeViewModel
-    let profile: Profile
     
     var body: some View {
         ScrollView {
@@ -19,8 +18,8 @@ struct ProfileSummary: View {
                     .bold()
                     .font(.title)
                 Text("Notifications: \(profile.prefersNotifications ? "On": "Off" )")
-                Text("Seasonal Photos: \(profile.seasonalPhoto.rawValue)")
-                Text("Goal Date: ") + Text(profile.goalDate, style: .date)
+                Text("Seasonal Photos: \(profile.seasonalPhoto)")
+                Text("Goal Date: ") + Text(profile.goalDate)
                 
                 Divider()
                 
@@ -43,9 +42,11 @@ struct ProfileSummary: View {
 struct ProfileSummary_Previews: PreviewProvider {
     
     private static let hikes = ModelData().hikes
+    private static let profile = ProfileViewModel()
     
     static var previews: some View {
-        ProfileSummary(profile: .default)
+        ProfileSummary()
             .environmentObject(hikes[0])
+            .environmentObject(profile)
     }
 }

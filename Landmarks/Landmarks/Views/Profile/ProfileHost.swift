@@ -8,18 +8,35 @@
 import SwiftUI
 
 struct ProfileHost: View {
-    @State private var profile = Profile.default
+    @Environment(\.editMode) var editMode
+    @EnvironmentObject var profileViewModel: ProfileViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
-            ProfileSummary(profile: profile)
+            HStack {
+                Spacer()
+                EditButton()
+            }
+            
+            if (editMode?.wrappedValue.isEditing ?? false) {
+                Text("Profile Editor")
+            }
+            else {
+                ProfileSummary()
+            }
         }
         .padding()
     }
 }
 
 struct ProfileHost_Previews: PreviewProvider {
+    
+    private static let hikes = ModelData().hikes
+    private static let profile = ProfileViewModel()
+    
     static var previews: some View {
         ProfileHost()
+            .environmentObject(hikes[0])
+            .environmentObject(profile)
     }
 }
