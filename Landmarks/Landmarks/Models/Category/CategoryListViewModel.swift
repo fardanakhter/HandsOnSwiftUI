@@ -8,10 +8,10 @@
 import Foundation
 
 class CategoryListViewModel: ObservableObject {
-    private(set) var categoryRows: [CategoryRowViewModel]
+    private(set) var list: [CategoryRowViewModel]
     
     init(categoryRows: [CategoryRowViewModel]) {
-        self.categoryRows = categoryRows
+        self.list = categoryRows
     }
     
     var featuredLandmarkImage: String {
@@ -19,7 +19,7 @@ class CategoryListViewModel: ObservableObject {
     }
     
     private func getFeaturedLandmark() -> LandmarkViewModel {
-        return categoryRows.flatMap{ $0.landmarks }.filter{ $0.isFeatured }[0]
+        return list.flatMap{ $0.landmarks }.filter{ $0.isFeatured }[0]
     }
 }
 
