@@ -55,4 +55,8 @@ class ProfileViewModel: ObservableObject {
         }
     }
     
+    func mock(_ profile: ProfileViewModel) {
+        self.profile = profile.profile
+    }
+    
 }

@@ -12,15 +12,31 @@ struct ProfileHost: View {
     @EnvironmentObject var profileViewModel: ProfileViewModel
     @State private var defaultProfile = ProfileViewModel(.default)
     
+    private var isEditing: Bool {
+        editMode?.wrappedValue == .active
+    }
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
+                if isEditing {
+                    Button("Cancel", role: .cancel) {
+                        defaultProfile = profileViewModel
+                        editMode?.animation().wrappedValue = .inactive
+                    }
+                }
                 Spacer()
                 EditButton()
             }
             
-            if (editMode?.wrappedValue.isEditing ?? false) {
+            if isEditing {
                 ProfileEditor(profile: $defaultProfile)
+                    .onAppear {
+                        defaultProfile = profileViewModel
+                    }
+                    .onDisappear {
+                        profileViewModel.mock(defaultProfile)
+                    }
             }
             else {
                 ProfileSummary()
