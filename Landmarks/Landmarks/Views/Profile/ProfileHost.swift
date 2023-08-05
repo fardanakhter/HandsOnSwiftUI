@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfileHost: View {
     @Environment(\.editMode) var editMode
     @EnvironmentObject var profileViewModel: ProfileViewModel
+    @State private var defaultProfile = ProfileViewModel(.default)
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -19,7 +20,7 @@ struct ProfileHost: View {
             }
             
             if (editMode?.wrappedValue.isEditing ?? false) {
-                Text("Profile Editor")
+                ProfileEditor(profile: $defaultProfile)
             }
             else {
                 ProfileSummary()

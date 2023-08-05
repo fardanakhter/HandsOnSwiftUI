@@ -16,22 +16,43 @@ class ProfileViewModel: ObservableObject {
     }
     
     var username: String {
-        profile.username
+        get {
+            profile.username
+        }
+        set {
+            profile.username = newValue
+        }
     }
     
     var prefersNotifications: Bool {
-        profile.prefersNotifications
+        get {
+            profile.prefersNotifications
+        }
+        set {
+            profile.prefersNotifications = newValue
+        }
+    }
+    
+    var seasonalPhotos: [String] {
+        Profile.Season.allCases.map{ $0.rawValue }
     }
     
     var seasonalPhoto: String {
-        profile.seasonalPhoto.rawValue
+        get {
+            profile.seasonalPhoto.rawValue
+        }
+        set {
+            profile.seasonalPhoto = Profile.Season(rawValue: newValue)!
+        }
     }
     
-    var goalDate: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM,dd yyyy"
-        let stringDate = formatter.string(from: profile.goalDate)
-        return stringDate
+    var goalDate: Date {
+        get {
+            profile.goalDate
+        }
+        set {
+            profile.goalDate = newValue
+        }
     }
     
 }
