@@ -22,7 +22,7 @@ struct CategoryRow: View {
                 HStack(spacing: 16.0) {
                     ForEach(viewModel.landmarks) { row in
                         NavigationLink {
-                            LandmarkDetail(landmark: Binding.constant(row))
+                            LandmarkDetail(landmark: row)
                         } label: {
                             CategoryItem(landmark: row)
                         }
@@ -41,5 +41,7 @@ struct CategoryRow_Previews: PreviewProvider {
     
     static var previews: some View {
         CategoryRow(viewModel: categoryRows[0])
+            .environmentObject(ViewModelContainer())
+            
     }
 }

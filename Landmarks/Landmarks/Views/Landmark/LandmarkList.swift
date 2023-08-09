@@ -24,7 +24,7 @@ struct LandmarkList: View {
                 }
                 ForEach(rows) { row in
                     NavigationLink {
-                        LandmarkDetail(landmark: Binding.constant(row))
+                        LandmarkDetail(landmark: row)
                     } label: {
                         LandmarkRow(landmark: row)
                     }
