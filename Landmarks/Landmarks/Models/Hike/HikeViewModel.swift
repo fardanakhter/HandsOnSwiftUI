@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HikeViewModel: ObservableObject {
+struct HikeViewModel {
     private(set) var hike: Hike
     
     init(_ hike: Hike){

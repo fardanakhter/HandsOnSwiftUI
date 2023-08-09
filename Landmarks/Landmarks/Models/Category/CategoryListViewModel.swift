@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CategoryListViewModel: ObservableObject {
+struct CategoryListViewModel {
     private(set) var list: [CategoryRowViewModel]
     
     init(categoryRows: [CategoryRowViewModel]) {

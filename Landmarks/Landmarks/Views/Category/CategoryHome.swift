@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct CategoryHome: View {
-    @EnvironmentObject var category: CategoryListViewModel
-    @EnvironmentObject var hike: HikeViewModel
+    @EnvironmentObject var viewModelContainer: ViewModelContainer
+    
+    private var category: CategoryListViewModel {
+        viewModelContainer.categoryList
+    }
+    private var hike: HikeViewModel {
+        viewModelContainer.hikes[0]
+    }
     
     @State private var isShowingProfile: Bool = false
     
@@ -46,13 +52,8 @@ struct CategoryHome: View {
 }
 
 struct CategoryHome_Previews: PreviewProvider {
-    static let modelData = ModelData()
-    
     static var previews: some View {
         CategoryHome()
-            .environmentObject(modelData.categories)
-            .environmentObject(LandmarkListViewModel(landmarks: modelData.landmarks))
-            .environmentObject(ModelData().hikes[0])
-            .environmentObject(ProfileViewModel())
+            .environmentObject(ViewModelContainer())
     }
 }

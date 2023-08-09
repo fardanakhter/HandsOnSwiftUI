@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct LandmarkList: View {
-    @EnvironmentObject var viewModel: LandmarkListViewModel
+    @EnvironmentObject var viewModels: ViewModelContainer
     
     @State private var showFavouritesOnly = false
     
     private var rows: [LandmarkViewModel] {
-        viewModel.getLandmarks(withFilter: showFavouritesOnly)
+        viewModels.landmarkList.getLandmarks(withFilter: showFavouritesOnly)
     }
     
     var body: some View {
@@ -24,7 +24,7 @@ struct LandmarkList: View {
                 }
                 ForEach(rows) { row in
                     NavigationLink {
-                        LandmarkDetail(landmark: row)
+                        LandmarkDetail(landmark: Binding.constant(row))
                     } label: {
                         LandmarkRow(landmark: row)
                     }
@@ -36,14 +36,10 @@ struct LandmarkList: View {
 }
 
 struct LandmarkList_Previews: PreviewProvider {
-    private static var landmarks: LandmarkListViewModel {
-        LandmarkListViewModel(landmarks: ModelData().landmarks)
-    }
-
     static var previews: some View {
         ForEach(["iPhone SE (3rd generation)", "iPhone 14"], id: \.self) { deviceName in
             LandmarkList()
-                .environmentObject(landmarks)
+                .environmentObject(ViewModelContainer())
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
         }

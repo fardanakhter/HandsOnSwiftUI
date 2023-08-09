@@ -40,26 +40,10 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static let modelData = ModelData()
-    
-    private static var landmarkListViewModel: LandmarkListViewModel {
-        let listDataModel = modelData.landmarks
-        return LandmarkListViewModel(landmarks: listDataModel)
-    }
-    
-    private static var categoryListViewModel: CategoryListViewModel {
-        return modelData.categories
-    }
-    
-    private static var hikeViewModel: HikeViewModel {
-        return modelData.hikes[0]
-    }
+    static let viewModels = ViewModelContainer()
     
     static var previews: some View {
         ContentView()
-            .environmentObject(landmarkListViewModel)
-            .environmentObject(categoryListViewModel)
-            .environmentObject(hikeViewModel)
-            .environmentObject(ProfileViewModel())
+            .environmentObject(viewModels)
     }
 }

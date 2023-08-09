@@ -42,7 +42,7 @@ struct HikeDetail: View {
 
 struct HikeDetail_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = ModelData().hikes[0]
+        let viewModel = ViewModelContainer().hikes[0]
         return HikeDetail(viewModel: viewModel)
     }
 }

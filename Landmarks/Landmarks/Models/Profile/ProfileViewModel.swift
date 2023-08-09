@@ -7,9 +7,9 @@
 
 import Foundation
 
-class ProfileViewModel: ObservableObject {
+struct ProfileViewModel {
     
-    @Published private var profile: Profile
+    private var profile: Profile
     
     init(_ profile: Profile = .default) {
         self.profile = profile
@@ -55,8 +55,8 @@ class ProfileViewModel: ObservableObject {
         }
     }
     
-    func mock(_ profile: ProfileViewModel) {
-        self.profile = profile.profile
-    }
+//    func mock(_ profile: ProfileViewModel) {
+//        self.profile = profile.profile
+//    }
     
 }

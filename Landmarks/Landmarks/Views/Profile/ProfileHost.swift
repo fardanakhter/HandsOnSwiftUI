@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ProfileHost: View {
     @Environment(\.editMode) var editMode
-    @EnvironmentObject var profileViewModel: ProfileViewModel
-    @State private var defaultProfile = ProfileViewModel(.default)
+    @EnvironmentObject var viewModelContainer: ViewModelContainer
+    @State private var draftProfile = ProfileViewModel(.default)
     
     private var isEditing: Bool {
         editMode?.wrappedValue == .active
@@ -21,7 +21,7 @@ struct ProfileHost: View {
             HStack {
                 if isEditing {
                     Button("Cancel", role: .cancel) {
-                        defaultProfile = profileViewModel
+                        draftProfile = viewModelContainer.profile
                         editMode?.animation().wrappedValue = .inactive
                     }
                 }
@@ -30,16 +30,16 @@ struct ProfileHost: View {
             }
             
             if isEditing {
-                ProfileEditor(profile: $defaultProfile)
+                ProfileEditor(profile: $draftProfile)
                     .onAppear {
-                        defaultProfile = profileViewModel
+                        draftProfile = viewModelContainer.profile
                     }
                     .onDisappear {
-                        profileViewModel.mock(defaultProfile)
+                        viewModelContainer.profile = draftProfile
                     }
             }
             else {
-                ProfileSummary()
+                ProfileSummary(profile: draftProfile, hike: viewModelContainer.hikes[0])
             }
         }
         .padding()
@@ -47,13 +47,7 @@ struct ProfileHost: View {
 }
 
 struct ProfileHost_Previews: PreviewProvider {
-    
-    private static let hikes = ModelData().hikes
-    private static let profile = ProfileViewModel()
-    
     static var previews: some View {
-        ProfileHost()
-            .environmentObject(hikes[0])
-            .environmentObject(profile)
+        ProfileHost().environmentObject(ViewModelContainer())
     }
 }

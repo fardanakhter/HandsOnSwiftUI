@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ProfileSummary: View {
-    @EnvironmentObject var profile: ProfileViewModel
-    @EnvironmentObject var hike: HikeViewModel
+    let profile: ProfileViewModel
+    let hike: HikeViewModel
     
     var body: some View {
         ScrollView {
@@ -40,13 +40,9 @@ struct ProfileSummary: View {
 }
 
 struct ProfileSummary_Previews: PreviewProvider {
-    
-    private static let hikes = ModelData().hikes
-    private static let profile = ProfileViewModel()
+    private static let viewModels = ViewModelContainer()
     
     static var previews: some View {
-        ProfileSummary()
-            .environmentObject(hikes[0])
-            .environmentObject(profile)
+        ProfileSummary(profile: viewModels.profile, hike: viewModels.hikes[0])
     }
 }

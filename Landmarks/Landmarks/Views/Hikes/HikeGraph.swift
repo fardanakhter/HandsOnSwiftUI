@@ -69,7 +69,7 @@ func magnitude(of range: Range<Double>) -> Double {
 }
 
 struct HikeGraph_Previews: PreviewProvider {
-    private static let hikeViewModel = ModelData().hikes[0]
+    private static let hikeViewModel = ViewModelContainer().hikes[0]
 
     static var previews: some View {
         Group {

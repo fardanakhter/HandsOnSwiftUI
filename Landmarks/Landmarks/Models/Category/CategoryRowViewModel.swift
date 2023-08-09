@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CategoryRowViewModel {
+struct CategoryRowViewModel {
     private(set) var category: String
     private(set) var landmarks: [LandmarkViewModel]
     

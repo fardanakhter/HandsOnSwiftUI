@@ -17,12 +17,12 @@ struct CategoryRow: View {
                 .font(.title3)
                 .kerning(1.5)
                 .bold()
-            
+
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16.0) {
                     ForEach(viewModel.landmarks) { row in
                         NavigationLink {
-                            LandmarkDetail(landmark: row)
+                            LandmarkDetail(landmark: Binding.constant(row))
                         } label: {
                             CategoryItem(landmark: row)
                         }
@@ -37,7 +37,7 @@ struct CategoryRow: View {
 }
 
 struct CategoryRow_Previews: PreviewProvider {
-    static let categoryRows = ModelData().categories.list
+    static let categoryRows = ViewModelContainer().categoryList.list
     
     static var previews: some View {
         CategoryRow(viewModel: categoryRows[0])

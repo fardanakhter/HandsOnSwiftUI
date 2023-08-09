@@ -7,8 +7,8 @@
 
 import Foundation
 
-class DataLoader<T: Decodable> {
-    static func load(from file: String) -> T {
+class DataLoader {
+    static func load<T: Decodable>(from file: String) -> T {
         var data: Data
         
         guard let url = Bundle.main.url(forResource: file, withExtension: nil) else {
