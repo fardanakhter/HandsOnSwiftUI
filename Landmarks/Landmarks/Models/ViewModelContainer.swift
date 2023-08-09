@@ -11,11 +11,10 @@ class ViewModelContainer: ObservableObject {
     @Published var profile: ProfileViewModel = ProfileViewModel()
     
     @Published var landmarkList: LandmarkListViewModel = {
-        LandmarkListViewModel.init(landmarks: getLandmarks())
+        LandmarkListViewModel.init(landmarks: landmarks)
     }()
     
     @Published var categoryList: CategoryListViewModel = {
-        let landmarks = getLandmarks()
         let rows = Dictionary(grouping: landmarks, by: {$0.landmarkCategory}).map(CategoryRowViewModel.init)
         return CategoryListViewModel(categoryRows: rows)
     }()
@@ -23,6 +22,8 @@ class ViewModelContainer: ObservableObject {
     var hikes: [HikeViewModel] = {
         getHikes().map(HikeViewModel.init)
     }()
+    
+    static private let landmarks = getLandmarks()
     
     static private func getLandmarks() -> [LandmarkViewModel] {
         let landmarks: [Landmark] = DataLoader.load(from: "landmarkData.json")
