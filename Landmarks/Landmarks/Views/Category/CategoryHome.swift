@@ -10,6 +10,9 @@ import SwiftUI
 struct CategoryHome: View {
     @EnvironmentObject var viewModelContainer: ViewModelContainer
     
+    private var featuredCards: [FeaturedCard] {
+        viewModelContainer.landmarkList.featuredList.map(FeaturedCard.init)
+    }
     private var category: CategoryListViewModel {
         viewModelContainer.categoryList
     }
@@ -22,12 +25,9 @@ struct CategoryHome: View {
     var body: some View {
         NavigationView {
             List {
-                Image(category.featuredLandmarkImage)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 200)
-                    .cornerRadius(5.0)
-                    .clipped()
+                PageView(pages: featuredCards)
+                    .aspectRatio(3 / 2, contentMode: .fit)
+                    .listRowInsets(EdgeInsets())
                 
                 ForEach(category.list, id: \.category) { row in
                     CategoryRow(viewModel: row)
