@@ -50,7 +50,7 @@ struct LandmarkViewModel: Identifiable {
     }
     
     var featuredImage: String {
-        isFeatured ? "\(landmarkName)_feature" : ""
+        landmark.isFeatured ? "\(landmark.imageName)_feature" : ""
     }
     
     var coordinates: CLLocationCoordinate2D {

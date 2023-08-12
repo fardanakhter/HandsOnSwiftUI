@@ -39,6 +39,7 @@ struct TextOverlay: View {
                 Text(landmark.landmarkCategory)
                     .font(.system(size: 18))
                     .foregroundColor(.white)
+                    .fontWeight(.semibold)
             }
             .padding(16)
         }
