@@ -11,9 +11,11 @@ class LandmarkListViewModel {
     var list: [LandmarkViewModel]
     
     private var favoriteList: [LandmarkViewModel] {
-        list.filter {
-            $0.isFavorite
-        }
+        list.filter { $0.isFavorite }
+    }
+    
+    var featuredList: [LandmarkViewModel] {
+        list.filter { $0.isFeatured }
     }
     
     init(landmarks: [LandmarkViewModel]) {

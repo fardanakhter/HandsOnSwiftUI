@@ -49,6 +49,10 @@ struct LandmarkViewModel: Identifiable {
         landmark.isFeatured
     }
     
+    var featuredImage: String {
+        isFeatured ? "\(landmarkName)_feature" : ""
+    }
+    
     var coordinates: CLLocationCoordinate2D {
         .init(latitude: landmark.coordinates.latitude, longitude: landmark.coordinates.longitude)
     }
