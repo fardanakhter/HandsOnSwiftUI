@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PageView<Page: View>: View {
-    @State private var pageNumber: Int = 1
+    @State private var pageNumber: Int = 0
     let pages: [Page]
     
     var body: some View {
