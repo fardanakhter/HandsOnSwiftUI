@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FeatureCard: View {
+struct FeaturedCard: View {
     var landmark: LandmarkViewModel
 
     var body: some View {
@@ -51,6 +51,6 @@ struct FeaturedCard_Previews: PreviewProvider {
     private static let landmarks = ViewModelContainer().landmarkList.list
     
     static var previews: some View {
-        FeatureCard(landmark: landmarks[3])
+        FeaturedCard(landmark: landmarks[3])
     }
 }

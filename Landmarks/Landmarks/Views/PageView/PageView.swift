@@ -24,7 +24,7 @@ struct PageView<Page: View>: View {
 struct PageView_Previews: PreviewProvider {
     static let featuredList = ViewModelContainer().landmarkList.featuredList
     static var previews: some View {
-        PageView(pages: featuredList.map(FeatureCard.init))
+        PageView(pages: featuredList.map(FeaturedCard.init))
             .aspectRatio(3 / 2, contentMode: .fit)
     }
 }
